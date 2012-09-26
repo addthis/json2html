@@ -68,13 +68,13 @@ __Add an Id__
 
 ####Attributes
 
-json2html takes a guess here, hoping you haven't got any "span" attributes:
+json2html takes a guess here, hoping you haven't got any "span" attributes. Note that "html" ~ innerHTML, although internally it creates a textNode.
 
 ```javascript
 			{ 
 				"a": {
 					href: "http://www.github.com",
-					text: "Github"
+					html: "Github"
 				} 
 			}
 ```
