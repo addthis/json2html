@@ -6,13 +6,13 @@ __json2html__ is a straightforward way to store HTML in JavaScript. It's not a t
 - Native HTML:
 
 ```html
-			<div class="name-tag">Hello, World</div>
+	<div class="name-tag">Hello, World</div>
 ```
 
 - json2html
 
 ```javascript
-			{ "div.name-tag": "Hello, World" }
+	{ "div.name-tag": "Hello, World" }
 ```
 
 ##Usage
