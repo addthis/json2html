@@ -31,13 +31,13 @@ __json2html__ is a straightforward way to store HTML in JavaScript. It's not a t
 Object keys communicate element __tag__, __classes__, and __id__ à la [Jade](http://jade-lang.com/).
 
 ```javascript
-			{ "h1": "Hello, World" }
+	{ "h1": "Hello, World" }
 ```
 
 &nbsp;&nbsp;&nbsp;&nbsp;&rarr;
 
 ```html
-			<h1>Hello, World</h1>
+	<h1>Hello, World</h1>
 ```
 
 ####Classes/Id
@@ -45,25 +45,25 @@ Object keys communicate element __tag__, __classes__, and __id__ à la [Jade](ht
 __Classes__
 
 ```javascript
-			{ "h1.header.example": "Hello, World" }
+	{ "h1.header.example": "Hello, World" }
 ```
 
 &nbsp;&nbsp;&nbsp;&nbsp;&rarr;
 
 ```html
-			<h1 class="header example">Hello, World</h1>
+	<h1 class="header example">Hello, World</h1>
 ```
 
 __Add an Id__
 
 ```javascript
-			{ "h1#header.header.example": "Hello, World" }
+	{ "h1#header.header.example": "Hello, World" }
 ```
 
 &nbsp;&nbsp;&nbsp;&nbsp;&rarr;
 
 ```html
-			<h1 id="header" class="header example">Hello, World</h1>
+	<h1 id="header" class="header example">Hello, World</h1>
 ```
 
 ####Attributes
@@ -71,18 +71,18 @@ __Add an Id__
 json2html takes a guess here, hoping you haven't got any "span" attributes. Note that "html" ~ innerHTML, although internally it creates a textNode.
 
 ```javascript
-			{ 
-				"a": {
-					href: "http://www.github.com",
-					html: "Github"
-				} 
-			}
+	{ 
+		"a": {
+			href: "http://www.github.com",
+			html: "Github"
+		} 
+	}
 ```
 
 &nbsp;&nbsp;&nbsp;&nbsp;&rarr;
 
 ```html
-			<a href="http://www.github.com">Github</a>
+	<a href="http://www.github.com">Github</a>
 ```
 
 ####Nested elements
@@ -115,13 +115,13 @@ Use arrays to keep order:
 
 
 ```javascript
-{
-	"div": [
-			{"p": "This is paragraph one"},
-			{"p": "This is paragraph two"}
-		]
+	{
+		"div": [
+				{"p": "This is paragraph one"},
+				{"p": "This is paragraph two"}
+			]
+		}
 	}
-}
 ```
 
 &nbsp;&nbsp;&nbsp;&nbsp;&rarr;
