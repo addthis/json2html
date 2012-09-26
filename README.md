@@ -22,7 +22,7 @@ __json2html__ is a straightforward way to store HTML in JavaScript. It's not a t
 	var el = json2html(elObj);
 	
 	$(el)  //the element already exists
-		--> [<span>​testing​</span>]
+		--> [<span>Testing</span>]
 
 ##Syntax
 
