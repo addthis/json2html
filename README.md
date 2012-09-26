@@ -26,8 +26,6 @@ __json2html__ is a straightforward way to store HTML in JavaScript. It's not a t
 
 ##Syntax
 
-###Basic
-
 Object keys communicate element __tag__, __classes__, and __id__ à la [Jade](http://jade-lang.com/).
 
 ```javascript
@@ -188,6 +186,8 @@ However, really robust benchmarks are still on the todo.
 - Plugin system. For instance, one to pass "click": fn and have an onclick listener.
 - Templating patterns. What's the friendliest way to write a template as JSON? 
 
-##License
+##Copyright and License
 
-json2html is licensed under [Apache 2.0](http://www.apache.org/licenses/LICENSE-2.0.html)
+Copyright 2012 Clearspring Technologies, Inc.
+
+Licensed under the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0.html)
