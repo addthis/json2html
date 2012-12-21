@@ -28,7 +28,7 @@
     };
 
     w = w ? w : this; // attach either to external context or a specified context (argument of this immediately executing function)
-    w.json2html = function (elObj) {
+    w.json2html = function json2html(elObj) {
         var i,
             key,
             val,
@@ -64,7 +64,7 @@
         //if this is an array, definitely interpret members of that array as children. Apply json2html to each child, then append.
         if (typeof val === 'object' && 'length' in val) {
             for (i in val) {
-                var c = arguments.callee(val[i]);
+                var c = json2html(val[i]);
                 el.appendChild(c);
             }
             return el;
@@ -111,7 +111,7 @@
         var checkIfIsChildren = function(k,v) {
             if(k==='children' || k==='childNodes') {
                 for(var i in v) {
-                    el.appendChild(args.callee(v[i]));
+                    el.appendChild(json2html(v[i]));
                 }
                 return true;
             }
@@ -157,7 +157,7 @@
                     else {
                         obj = {};
                         obj[elString] = child;
-                        child = arguments.callee(obj);
+                        child = json2html(obj);
                         el.appendChild(child);
                     }
                 }
