@@ -148,6 +148,8 @@
                         
                         if (elString === 'html') { //"html" here serves as text; "text" might be a useful attribute
                             el.appendChild(document.createTextNode(child));
+                        } else if (elString === 'className' || elString === 'class') { //using setAttribute for class does not trigger a re-render in quirks mode
+                                el.className = child;
                         } else {
                             el.setAttribute(elString, child);
                         }
